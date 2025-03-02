@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2c003e, #800020);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            color: white;
+            text-align: center;
+        }
+        .welcome-text {
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            color: black;
+            max-width: 600px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            background: linear-gradient(135deg, #400d40, #730028);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #5a0f5a, #900030);
+            box-shadow: 0 0 10px rgba(144, 0, 48, 0.8);
+        }
+    </style>
+    <script>
+        function logout() {
+            document.body.innerHTML = '<h1>Thanks for visiting my website</h1>' +
+                                      '<br><button onclick="goToLogin()">Go to Login Page</button>';
+        }
+        function goToLogin() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="welcome-text">Welcome to Home Page</div>
+    <div class="content">
+        <p>You have successfully logged in.</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+</body>
+</html>
